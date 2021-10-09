@@ -12,7 +12,7 @@ services:
       - php
       - mariadb
     networks:
-      - netgear
+      - laravelx
 
   php:
     image: masumonline/php-alpine-7.4
@@ -23,7 +23,7 @@ services:
     environment:
       - PHP_MEMORY_LIMIT=1024M
     networks:
-      - netgear
+      - laravelx
 
   mariadb:
     image: mariadb:10.5
@@ -35,7 +35,7 @@ services:
     volumes:
       - ./db/:/var/lib/mysql/
     networks:
-      - netgear
+      - laravelx
  
   adminer:
     image: michalhosna/adminer
@@ -47,7 +47,7 @@ services:
       ADMINER_SERVER: mariadb
       ADMINER_USERNAME: root
     networks:
-      - netgear
+      - laravelx
 
 networks:
-  netgear:
+  laravelx:
