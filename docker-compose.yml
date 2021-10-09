@@ -15,7 +15,7 @@ services:
       - netgear
 
   php:
-    build: ./php/.
+    image: masumonline/php-alpine-7.4
     working_dir: /var/www/html
     user: "1000:1000"
     volumes:
